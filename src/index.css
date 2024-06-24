@@ -31,6 +31,7 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+
 }
 
 button {
@@ -66,4 +67,11 @@ button:focus-visible {
 }
 .houseContainer{
   margin-top: 20px;
+  
+}
+label{
+  color: white;
+}
+h1{
+  justify-content: center;
 }
