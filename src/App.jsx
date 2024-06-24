@@ -3,6 +3,7 @@ import { useState } from 'react'
 import NavBar from './Components/Navbar'
 import Card from './Components/card'
 import CardContainer from './Components/cardscontainer'
+import Modol from './Components/Modol'
 
 function App() {
 
