@@ -1,5 +1,7 @@
 import React from "react";
 import Modol from "./Modol";
+import LandingPage from "./Landingpage";
+import { Link } from "react-router-dom";
 
 const NavBar = ()=>{
     return(
@@ -9,8 +11,19 @@ const NavBar = ()=>{
         <a className="navbar-brand">Pata Nyumba</a>
         <Modol/>
         <form className="d-flex" role="search">
-        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button className="btn btn-outline-success" type="submit" style={{backgroundColor:'green', color:'white'}}>Search</button>
+
+        <Link to="/LandingPage" className="nav-brand">LandingPage</Link>
+        <Link to="/App" className="nav-brand">App</Link>
+        
+        <input
+              className="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button className="btn btn-outline-success" type="submit" style={{color:'white',border:'1px solid'}}>
+              Search
+            </button>
          </form>
         </div>
     </nav>
