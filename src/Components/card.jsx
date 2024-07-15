@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import house from "../assets/house1.jpeg"
+
 
 const Card=(props)=>{
   console.log(props);  
@@ -22,8 +22,8 @@ const Card=(props)=>{
 }
     return(
         <>
-<div className="card" style={{width: "21rem", marginTop:"10px"}}>
-  <img src={house} className="card-img-top" alt=""/>
+<div className="card" style={{width: "21rem", marginTop:"10px", height:"25rem"}}>
+  <img src={props.houseImage} className="card-img-top" alt=""/>
   <div className="card-body">
     <h5 className="card-title">{props.houseName}</h5>
     <h6 className="card-title">Price: ksh.{props.housePrice} p.m</h6>

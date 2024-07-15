@@ -13,7 +13,7 @@ const NavBar = ()=>{
         <form className="d-flex" role="search">
 
         <Link to="/LandingPage" className="nav-brand">LandingPage</Link>
-        <Link to="/App" className="nav-brand">App</Link>
+        <Link to="/App" className="nav-brand">Home</Link>
         
         <input
               className="form-control me-2"
