@@ -1,10 +1,26 @@
 import React from "react";
 import { useFormik } from "formik";
 import { homeFormSchema } from "./schema";
+import app from "../firebaseconfig";
+import { getDatabase, ref, set, push } from "firebase/database";
 const Form=()=>{
-  const onSubmit = () => {
-    alert("Congratulations!!!You have completed the application");
-   setSubmitting(false)
+  const onSubmit = async (values, { setSubmitting, resetForm }) => {
+    const db = getDatabase(app);
+    const newDocRf = push(ref(db, "patanyumba/houses")); 
+    set(newDocRf, {
+      size: values.housesize,
+      location: values.location,
+      description: values.description,
+      image: values.imageUrl,
+      prize: values.prize
+    }).then((resp)=>{
+      console.log(resp);
+      alert("Data Saved Successfully")
+    }).catch((err)=>{
+      console.log(err);
+      alert ("Error Saving Data")
+    })
+   
   }
   const { values, handleChange, handleBlur, handleSubmit, isSubmitting, setSubmitting,errors,touched } = useFormik({
     initialValues: {
