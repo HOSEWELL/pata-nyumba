@@ -6,6 +6,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import LandingPage from './Components/Landingpage.jsx';
+import Login from './Components/Login.jsx';
+import Register from './Components/Register.jsx';
 
 
 
@@ -16,12 +18,20 @@ const router = createBrowserRouter([
     element: <LandingPage/>
   },
   {
-    path: "/LandingPage",
+    path: "/landingPage",
     element: <LandingPage />
   },
   {
-    path: "/App",
+    path: "/app",
     element: <App />
+  },
+  {
+    path: "/login",
+    element: <Login />
+  },
+  {
+    path: "/register",
+    element: <Register />
   },
 
 ])
